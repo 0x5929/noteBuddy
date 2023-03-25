@@ -47,6 +47,9 @@ gem "bootsnap", require: false
 # User authenticatino management
 gem 'devise'
 
+# Shakapacker (webpacker) for javascript integration
+gem "shakapacker", "= 6.6"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
@@ -70,4 +73,3 @@ group :test do
   gem "webdrivers"
 end
 
-gem "shakapacker", "= 6.6"

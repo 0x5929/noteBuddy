@@ -13,3 +13,21 @@
 //
 // const images = require.context('./images', true)
 // const imagePath = (name) => images(name, true)
+//
+
+
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import App from '../src/App.jsx'
+import App2 from '../src/App2.jsx'
+
+const noteContainer = document.getElementById('app')
+const noteRoot = createRoot(noteContainer)
+
+const sampleContainer = document.getElementById('app2')
+const sampleRoot = createRoot(sampleContainer)
+
+document.addEventListener('DOMContentLoaded', () => {
+	noteRoot.render(<App />)
+	sampleRoot.render(<App2 />)
+})
