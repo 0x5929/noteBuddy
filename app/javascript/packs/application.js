@@ -22,12 +22,14 @@ import App from '../src/App.jsx'
 import App2 from '../src/App2.jsx'
 
 const noteContainer = document.getElementById('app')
-const noteRoot = createRoot(noteContainer)
+const noteRoot = noteContainer ? createRoot(noteContainer) : null
 
 const sampleContainer = document.getElementById('app2')
-const sampleRoot = createRoot(sampleContainer)
+const sampleRoot = sampleContainer ? createRoot(sampleContainer) : null
 
 document.addEventListener('DOMContentLoaded', () => {
-	noteRoot.render(<App />)
-	sampleRoot.render(<App2 />)
+	if (noteContainer !== null)
+		noteRoot.render(<App />)
+	if (sampleContainer !== null)
+		sampleRoot.render(<App2 />)
 })
