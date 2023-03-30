@@ -19,8 +19,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_30_182842) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "project_id"
-    t.boolean "completed"
+    t.boolean "completed", default: false
     t.integer "x", default: 0
+    t.integer "y", default: 0
     t.index ["project_id"], name: "index_notes_on_project_id"
   end
 
