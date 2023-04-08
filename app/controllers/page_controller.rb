@@ -5,6 +5,9 @@ class PageController < ApplicationController
   def about
   end
 
-  def notes
+  def todo
+  end
+
+  def whiteboard
   end
 end
