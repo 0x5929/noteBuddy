@@ -5,6 +5,9 @@ class PageController < ApplicationController
   def about
   end
 
+  def dashboard
+  end 
+
   def todo
   end
 

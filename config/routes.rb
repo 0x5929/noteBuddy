@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root 'page#home'
 
   get 'about', to: 'page#about'
+  get 'dashboard', to: 'page#dashboard'
   get 'todo', to: 'page#todo'
   get 'whiteboard', to: 'page#whiteboard'
 

@@ -7,15 +7,9 @@
   <p>
     <%= "Hello world, #{current_user.email}!" %>
   </p>
-  <p>
-    <%= link_to 'Sign Out!', destroy_user_session_path %>
-  </p>
 <% else %>
-  <%= link_to 'Sign Up!', new_user_registration_path %>
-  <%= link_to 'Sign In!', new_user_session_path %>
+  <p>all the cool people sign in, you're not that cool...</p>
 <% end %>
-<div id='app'></div>
-<div id='app2'></div>
 
 <%# NOTES: %> 
 <%# Content: %> 
