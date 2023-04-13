@@ -14,8 +14,6 @@
 // const images = require.context('./images', true)
 // const imagePath = (name) => images(name, true)
 //
-
-
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import App from '../src/App.jsx'
@@ -28,8 +26,6 @@ const sampleContainer = document.getElementById('app2')
 const sampleRoot = sampleContainer ? createRoot(sampleContainer) : null
 
 document.addEventListener('DOMContentLoaded', () => {
-	if (noteContainer !== null)
-		noteRoot.render(<App />)
-	if (sampleContainer !== null)
-		sampleRoot.render(<App2 />)
+  if (noteContainer !== null) noteRoot.render(<App />)
+  if (sampleContainer !== null) sampleRoot.render(<App2 />)
 })
