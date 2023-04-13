@@ -1,27 +1,39 @@
-<h1>Page#home</h1>
-<div class="box">
-<p>Find me in app/views/page/home.html.erb</p>
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-12">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child notification is-primary">
+          <p class="title">Have an idea?</p>
+          <p class="subtitle">But have trouble organizing thoughts?</p>
+          <p>Notebuddy has the tools you need to see through your next <em>BIG</em> idea.</p>
+        </article>
+        <article class="tile is-child notification is-warning">
+          <p class="title">Built with the latest technology</p>
+          <p class="subtitle">Rails x React x Bulma <%= image_tag('heart.svg', style:'height:12px;width:12px;') %></p>
+          <p>Includes a todo app and a whiteboard to store notes for all your big ideas.</p>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-info">
+          <p class="title">Project management</p>
+          <p class="subtitle">Simple and effective</p>
+          <figure class="image is-4by3">
+            <%= image_tag('organize.svg', style:'height:640;width:480;') %>
+          </figure>
+        </article>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-danger">
+        <p class="title">What are you waiting for?</p>
+        <p class="subtitle">
+          More information?
+          <%= link_to 'See more', about_path, class: 'button is-info is-pulled-right is-rounded' %>
+        </p>
+        <div class="content">
+          <!-- Content -->
+        </div>
+      </article>
+    </div>
+  </div>
 </div>
-
-<% if user_signed_in? %>
-  <p>
-    <%= "Hello world, #{current_user.email}!" %>
-  </p>
-<% else %>
-  <p>all the cool people sign in, you're not that cool...</p>
-<% end %>
-
-<%# NOTES: %> 
-<%# Content: %> 
-<%#   One big hero %>
-<%#     Tired of: %> 
-<%#       - loose note papers %>
-<%#       - cant manage/maintain big projects %>
-<%#       - places too unorganized %>
-
-<%#     Introducing %>
-<%#       - notebuddy %>
-<%#         - todo list %>
-<%#         - plus %>
-<%#         - whiteboard %> 
-<%#         - save for each project %>
