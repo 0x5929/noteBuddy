@@ -25,10 +25,13 @@
     </div>
     <div class="tile is-parent">
       <article class="tile is-child notification is-danger">
-        <p class="title">What are you waiting for?</p>
-        <p class="subtitle">
+        <p class="title my-4">
+          What are you waiting for?
+          <%= link_to 'Sign in', new_user_session_path, class: 'button is-primary is-pulled-right has-text-weight-semibold' %>
+        </p>
+        <p class="subtitle my-4">
           More information?
-          <%= link_to 'See more', about_path, class: 'button is-info is-pulled-right is-rounded has-text-weight-semibold' %>
+          <%= link_to 'See more', about_path, class: 'button is-info is-pulled-right has-text-weight-semibold' %>
         </p>
         <div class="content">
           <!-- Content -->
