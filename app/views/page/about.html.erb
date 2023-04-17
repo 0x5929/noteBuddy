@@ -7,9 +7,75 @@
   <p class="is-size-3 has-text-centered mb-3">Documentation</p>
   <div class="tabs is-centered is-toggle is-toggle-rounded">
     <ul>
-      <li class="is-active"><a>Dashboard</a></li>
-      <li><a>Todo</a></li>
-      <li><a>Whiteboard</a></li>
+      <li class="is-active" data-target="dashboard-doc">
+        <a>Dashboard</a>
+      </li>
+      <li data-target="todo-doc">
+        <a>Todo</a>
+      </li>
+      <li data-target="whiteboard-doc">
+        <a>Whiteboard</a>
+      </li>
     </ul>
   </div>
 
+  <div id="tab-content" class="box has-text-centered">
+    <div id="dashboard-doc">
+      <h3 class="size-5 title">
+        Dashboard Documentation 
+      </h3>
+      <p>
+        TODO: add dashboard doc
+      </p>
+    </div>
+    <div id="todo-doc" class="is-hidden">
+      <h3 class="size-5 title">
+        Todo Documentation 
+      </h3>
+      <p>
+        TODO: add todo doc
+      </p>
+    </div>
+    <div id="whiteboard-doc" class="is-hidden">
+      <h3 class="size-5 title">
+        Whiteboard Documentation 
+      </h3>
+      <p>
+        TODO: add whiteboard doc
+      </p>
+    </div>
+  </div>
+
+<script>
+  /***********************
+   *  tab btn and contents
+   *  using vanilla js
+  ************************/
+  // define el contants
+  const TABS = document.querySelectorAll('.tabs li')
+  const TAB_CONTENTS = document.querySelectorAll('#tab-content div')
+
+  // define event listener
+  const onclick = tab => {
+      // toggle tab class active
+      TABS.forEach(item => item.classList.remove('is-active'))
+      tab.classList.add('is-active')
+
+      // toggle tab content
+      let target = tab.dataset.target
+      TAB_CONTENTS.forEach(box => {
+        
+        if (box.getAttribute('id') === target) {
+          box.classList.remove('is-hidden')
+        } 
+        else {
+          box.classList.add('is-hidden')
+        }
+      })
+    }
+
+  // add event listeners
+  TABS.forEach((tab) => {
+    tab.addEventListener('click', () => onclick(tab))
+  })
+</script>
